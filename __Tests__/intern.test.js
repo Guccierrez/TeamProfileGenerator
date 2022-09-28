@@ -13,9 +13,6 @@ describe("Intern",() => {
             expect(newIntern.email).toEqual("SebTx@gmail.com");
             expect(newIntern.school).toEqual("Harvard");
 
-
-
-
         })
 
         describe("getSchool", ()=>{
@@ -41,15 +38,6 @@ describe("Intern",() => {
         })
         
 
-
-
-
-
-
-
-
 })
-// const Intern = require ("../lib/Intern");
-
 
     

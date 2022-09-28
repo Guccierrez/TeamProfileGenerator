@@ -153,4 +153,7 @@ const internQuestions = [
         message: "What school are you attending"
     }
 ]
-
+// html.push(team
+//     .filter(employee => employee.getRole() === "Manager")
+//     .map(manager => generateManager(manager))
+// );

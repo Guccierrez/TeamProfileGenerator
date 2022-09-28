@@ -1,4 +1,26 @@
-function generateHTML(allEmployees){
-return``
-}
-module.exports = generateHTML
+// const generateAllEmployees = allEmployees
+// const html = [];
+
+
+
+
+
+
+
+
+
+// module.exports = allEmployees => {
+
+//    // return `
+//     // write intial html
+//     // 
+//     // 
+//     // 
+//     // 
+//     // 
+//     // 
+//     //`
+
+
+// }
+
