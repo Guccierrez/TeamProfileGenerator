@@ -5,7 +5,7 @@ const Engineer = require("./lib/Engineer.js")
 const inquirer = require("inquirer")
 const fs = require("fs")
 const allEmployees = []
-const generateHTML = require ("./src/generatehtml.js")
+const renderHTML = require ("./src/renderHTML")
 
 
 function generateEmployee() {
@@ -144,7 +144,7 @@ function generateEngineer() {
             })
         }
         function printcard(){
-        fs.writeFile('generatehtml.html', generateHTML(allEmployees), (err) =>
+        fs.writeFile('generate-index.html', renderHTML(allEmployees), (err) =>
           err ? console.log(err) : console.log('yezzur html has dun been generated')
         );
         }

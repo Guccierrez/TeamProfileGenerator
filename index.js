@@ -85,74 +85,157 @@ function checkRole() {
 checkRole()
 
 
-const managerQuestions = [
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is your name?',
-    },
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is your ID?',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email?',
-    },
-    {
-        type: "input",
-        name: "officeNumber",
-        message: "What is your office number?"
-    }
-]
 
-const engineerQuestions = [
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is your name?',
-    },
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is your ID?',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email?',
-    },
-    {
-        type: "input",
-        name: "github",
-        message: "What if your github username"
-    },
-]
 
-const internQuestions = [
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is your name?',
-    },
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is your ID?',
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email?',
-    },
-    {
-        type: "input",
-        name: "school",
-        message: "What school are you attending"
-    }
-]
+function generateEngineer() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is your name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your ID number?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your GitHub Username',
+        },
+])}
+
+    function generateIntern() {
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'name',
+                message: 'What is your name?',
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: 'What is your ID number?',
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email?',
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: 'What school did you go to?',
+            },
+        ])}
+
+        function generateManager() {
+            inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'name',
+                    message: 'What is your name?',
+                },
+                {
+                    type: 'input',
+                    name: 'id',
+                    message: 'What is your ID number?',
+                },
+                {
+                    type: 'input',
+                    name: 'email',
+                    message: 'What is your email?',
+                },
+                {
+                    type: 'input',
+                    name: 'github',
+                    message: 'What is your office number',
+                },
+            ])
+
+        }
+
+
+
+
+
+
+
+
+// const managerQuestions = [
+//     {
+//         type: 'input',
+//         name: 'name',
+//         message: 'What is your name?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'id',
+//         message: 'What is your ID?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'email',
+//         message: 'What is your email?',
+//     },
+//     {
+//         type: "input",
+//         name: "officeNumber",
+//         message: "What is your office number?"
+//     }
+// ]
+
+// const engineerQuestions = [
+//     {
+//         type: 'input',
+//         name: 'name',
+//         message: 'What is your name?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'id',
+//         message: 'What is your ID?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'email',
+//         message: 'What is your email?',
+//     },
+//     {
+//         type: "input",
+//         name: "github",
+//         message: "What if your github username"
+//     },
+// ]
+
+// const internQuestions = [
+//     {
+//         type: 'input',
+//         name: 'name',
+//         message: 'What is your name?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'id',
+//         message: 'What is your ID?',
+//     },
+//     {
+//         type: 'input',
+//         name: 'email',
+//         message: 'What is your email?',
+//     },
+//     {
+//         type: "input",
+//         name: "school",
+//         message: "What school are you attending"
+//     }
+// ]
 // html.push(team
 //     .filter(employee => employee.getRole() === "Manager")
 //     .map(manager => generateManager(manager))
