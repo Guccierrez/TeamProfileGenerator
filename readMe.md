@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://guccierrez.github.io/WeatherDash/">
-    <img src= "./assets/weatherForcast.png" alt="Logo" width="160" height="120">
+  <a href="https://drive.google.com/file/d/1DfoRhCNxpoF0iJUouIVg40YYrPGHkfLJ/view">
+    <img src= "./assets/TeamGenerator.png" alt="Logo" width="160" height="120">
   </a>
 
   <h1 align="center">Gucci's  Fortune 500 Team Generator</h1>
@@ -80,7 +80,7 @@ Fabian Gutierrez - [fabiangutierrez580@gmail.com]
 (LinkedIn) - [www.linkedin.com/in/fabian-gutierrez-016523248]
 
 
-Project Link: []
+Project Link: [https://github.com/Guccierrez/TeamProfileGenerator]
 
 
 

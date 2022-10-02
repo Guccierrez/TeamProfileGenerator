@@ -12,6 +12,8 @@ function generateEmployee() {
     inquirer
     .prompt([
         {
+            //here this question will allow the user to open from a different sets of questions
+            //based on job title
             type: 'list',
             name: 'role',
             message: 'What is your role at the company',
@@ -23,21 +25,22 @@ function generateEmployee() {
      .then((answers) => {
 
 
-        if (answers.role === "Manager") {
+         if (answers.role === "Manager") {
+             console.log(answers)
+           generateManager()
+         
+           
+        }else if(answers.role === "Intern"){
             console.log(answers)
-          generateManager()
-
-            } else if(answers.role === "Engineer"){
-           console.log(answers)
+            generateIntern()
+            
+        } else if(answers.role === "Engineer"){
+            console.log(answers)
             generateEngineer()
 
-            }else if(answers.role === "Intern"){
-            console.log(answers)
-               generateIntern()
-
             } else{ 
-            console.log("done")
-                printcard();
+            console.log("hello")
+                makeHTML();
             } 
      });
  }
@@ -45,7 +48,7 @@ function generateEmployee() {
 
 
 
-
+//different questions are asked to diffeerent job positions
 function generateEngineer() {
     inquirer.prompt([
         {
@@ -97,13 +100,12 @@ function generateEngineer() {
             {
                 type: 'input',
                 name: 'school',
-                message: 'What school did you go to?',
+                message: 'What school are you currently going too?',
             },
         ]).then(response => {
             let intern = new Intern(response.name, response.id, response.email, response.school)
     
             allEmployees.push(intern)
-            // insert add new member function here**
             generateEmployee()
         })
     }
@@ -139,11 +141,12 @@ function generateEngineer() {
                 let manager = new Manager(response.name, response.id, response.email, response.officeNumber)
         
                 allEmployees.push(manager)
-                // insert add new member function here**
                 generateEmployee()
             })
         }
-        function printcard(){
+        //here the function actually renders the html that makes
+        //the employees cards
+        function makeHTML(){
         fs.writeFile('generate-index.html', renderHTML(allEmployees), (err) =>
           err ? console.log(err) : console.log('yezzur html has dun been generated')
         );

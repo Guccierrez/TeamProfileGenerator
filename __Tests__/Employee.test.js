@@ -25,7 +25,7 @@ describe('Employee',()=>{
             let newEmployee = new Employee("Gucci", 1, "fabiangutierrez580@gmail.com");
             
             expect(newEmployee.getName()).toEqual(name);
-            //why do the previous two lines have all three parameters
+
         });
         
         
