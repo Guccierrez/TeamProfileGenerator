@@ -2,8 +2,6 @@
 
 const generateAllEmployees = allEmployees => {
     const wholeTeamArray = [];
-    
-    
     const genManager = manager => {
         return `
         <div class="card employee-card mr-4 ml-4 mb-3">
@@ -21,25 +19,7 @@ const generateAllEmployees = allEmployees => {
         </div>
         `;
     };
-    
-    const genEngineer = engineer => {
-        return `
-<div class="card employee-card mr-4 ml-4 mb-3">
-<div class="card-header text-center">
-<h2 class="card-title">${engineer.getName()}</h2>
-<h3 class="card-title">${engineer.getRole()}</h3>
-</div>
-<div class="card-body">
-<ul class="list-group">
-<li class="list-group-item">ID: ${engineer.getId()}</li>
-<li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
-<li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
-</ul>
-</div>
-</div>
-`
 };
-
 const genIntern = intern => {
     return `
     
@@ -60,27 +40,44 @@ const genIntern = intern => {
     
     `
 }
-
-wholeTeamArray.push(allEmployees
-    .filter(employee => employee.getRole() === "Manager")
-    .map(manager => genManager(manager))
+const genEngineer = engineer => {
+    return `
+<div class="card employee-card mr-4 ml-4 mb-3">
+<div class="card-header text-center">
+<h2 class="card-title">${engineer.getName()}</h2>
+<h3 class="card-title">${engineer.getRole()}</h3>
+</div>
+<div class="card-body">
+<ul class="list-group">
+<li class="list-group-item">ID: ${engineer.getId()}</li>
+<li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
+<li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
+</ul>
+</div>
+</div>
+`
+//the .filter pulls out information for the for loop that we need in this case manager,
+//engineer and intern, then puts them in the right card
+    wholeTeamArray.push(allEmployees
+        .filter(employee => employee.getRole() === "Manager")
+        .map(manager => genManager(manager))
     );
     wholeTeamArray.push(allEmployees
         .filter(employee => employee.getRole() === "Engineer")
         .map(engineer => genEngineer(engineer))
-        );
-        wholeTeamArray.push(allEmployees
-            .filter(employee => employee.getRole() === "Intern")
-            .map(intern => genIntern(intern))
-            );
-            
-            return wholeTeamArray.join("");
-            
-        }
-        
-        
-        module.exports = allEmployees => {
-            return`
+    );
+    wholeTeamArray.push(allEmployees
+        .filter(employee => employee.getRole() === "Intern")
+        .map(intern => genIntern(intern))
+    );
+
+    return wholeTeamArray.join("");
+
+}
+
+
+module.exports = allEmployees => {
+    return `
             <!DOCTYPE html>
             <html lang="en">
             
@@ -116,4 +113,4 @@ wholeTeamArray.push(allEmployees
             </body>
             </html>
             `
-        }
+}
