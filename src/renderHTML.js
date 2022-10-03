@@ -34,7 +34,7 @@ const generateAllEmployees = allEmployees => {
 <li class="list-group-item">ID: ${engineer.getId()}</li>
 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
 <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
-</ul>GitHub: 
+</ul>
 </div>
 </div>
 `
