@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-With this Node Command-line apllication you'll use inquirer to enter your employees information and generate amazing cards with all the information a head CEO will ever need.
+With this Node Command-line apllication you'll use inquirer to enter your employees information and generate amazing cards with all the information a head CEO will ever need.(For VIDEO WALKTHROUGH please click on image at top of the screen)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
