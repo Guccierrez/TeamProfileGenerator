@@ -72,7 +72,7 @@ function generateEngineer() {
             message: 'What is your GitHub Username',
         },
 ]).then(response => {
-    let engineer = new Engineer(response.name, response.id, response.email, response.officeNumber)
+    let engineer = new Engineer(response.name, response.id, response.email, response.github)
 
     allEmployees.push(engineer)
     generateEmployee()
