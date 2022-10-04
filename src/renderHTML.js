@@ -1,5 +1,5 @@
 
-
+//these next 3 blocks of code are basically all the same and get put together 
 const generateAllEmployees = allEmployees => {
     const wholeTeamArray = [];
     const genManager = manager => {
