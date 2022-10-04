@@ -8,7 +8,7 @@
     <img src= "./assets/TeamGenerator.png" alt="Logo" width="160" height="120">
   </a>
 
-  <h1 align="center">Gucci's  Fortune 500 Team Generator</h1>
+  <h1 align="center">Gucci's  Fortune 500 Team Generator!</h1>
 
 
 

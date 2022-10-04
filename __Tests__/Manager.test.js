@@ -33,7 +33,7 @@ describe("Manager",() => {
                 expect (newManager.getRole()).toEqual("Manager");
             });
         
-        
+
         
         })
         

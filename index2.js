@@ -3,12 +3,13 @@ const fs = require("fs")
 const Intern = require("./lib/Intern")
 const Manager = require("./lib/Manager.js")
 const Engineer = require("./lib/Engineer.js")
-const allEmployees = []
 const renderHTML = require("./src/renderHTML")
-
+const allEmployees = []
 
 function generateEmployee() {
     inquirer
+
+    
         .prompt([
             {
                 //here this question will allow the user to open from a different sets of questions
