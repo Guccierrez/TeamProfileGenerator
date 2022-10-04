@@ -1,8 +1,7 @@
-
 //these next 3 blocks of code are basically all the same and get put together 
-const generateAllEmployees = allEmployees => {
-    const wholeTeamArray = [];
-    const genManager = manager => {
+        const generateAllEmployees = allEmployees => {
+        const wholeTeamArray = [];
+        const genManager = manager => {
         return `
         <div class="card employee-card mr-4 ml-4 mb-3">
         <div class="card-header text-center">
@@ -57,7 +56,8 @@ const generateAllEmployees = allEmployees => {
     `
     }
 //the .filter pulls out information for the for loop that we need in this case manager,
-//engineer and intern, then puts them in the right card
+//engineer and intern, then puts them in the right card then pushes it into 
+//empty array
     wholeTeamArray.push(allEmployees
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => genManager(manager))
@@ -85,7 +85,7 @@ module.exports = allEmployees => {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-            <title>My Team</title>
+            <title>Team generator</title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <link rel="stylesheet" href="style.css">

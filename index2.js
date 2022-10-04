@@ -8,8 +8,6 @@ const allEmployees = []
 
 function generateEmployee() {
     inquirer
-
-    
         .prompt([
             {
                 //here this question will allow the user to open from a different sets of questions
